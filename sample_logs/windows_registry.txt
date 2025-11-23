@@ -1,0 +1,2 @@
+"DisplayName"="Google Chrome"
+"Version"="129.0.1"

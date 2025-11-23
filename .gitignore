@@ -1,0 +1,16 @@
+# Ignore secrets
+.env
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large CVE datasets
+cve_data/
+*.json
+*.gz
+
+# OS / Editor files
+.DS_Store
+.vscode/

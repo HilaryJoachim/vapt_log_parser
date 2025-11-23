@@ -1,0 +1,1 @@
+2025-01-12 10:22:10 | Service Control Manager | Service_Stop | User stopped a service
