@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VAPT Log Parser UI</title>
+</head>
+<body>
+<h2>🔍 VAPT Log Processing Dashboard</h2>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <label>Select log file:</label>
+    <input type="file" name="logfile" required>
+    <button type="submit">Process Logs</button>
+</form>
+
+<br><hr>
+
+<a href="/view_logs">
+    <button>📄 View Parsed Logs (MongoDB)</button>
+</a>
+
+<br><br>
+<a href="/view_errors">
+    <button style="background-color:#ffcccc">🚨 View Error Logs</button>
+</a>
+
+<br><br>
+
+<a href="/sync_cve">
+    <button>🔁 Sync CVE Database</button>
+</a>
+
+</body>
+</html>

@@ -11,7 +11,6 @@ from parser_windows_event import parse_windows_event
 from parser_app import parse_app_log
 
 # -------- IMPORT DB ----------
-from db import save_log
 
 
 # ==============================================================================

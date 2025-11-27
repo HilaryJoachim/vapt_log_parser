@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VAPT Results</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h2>📌 Result Summary</h2>
+
+{% if message %}
+    <p style="color: green; font-size: 18px;">{{ message }}</p>
+{% endif %}
+
+{% if logs %}
+    <h3>🗂 Parsed Logs (latest 20)</h3>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Host</th>
+            <th>Software</th>
+            <th>Event Type</th>
+            <th>Message</th>
+        </tr>
+        {% for item in logs %}
+        <tr>
+            <td>{{ item.timestamp }}</td>
+            <td>{{ item.host }}</td>
+            <td>{{ item.software }}</td>
+            <td>{{ item.event_type }}</td>
+            <td>{{ item.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+{% if errors %}
+<h3>🚨 Error Reports</h3>
+<pre style="background:#222; color:#fff; padding:10px; border-radius:5px; max-height:400px; overflow:auto;">
+{% for e in errors %}
+{{ e }}
+{% endfor %}
+</pre>
+{% endif %}
+
+
+<br>
+<a href="/">⬅ Back to Dashboard</a>
+
+</body>
+</html>
