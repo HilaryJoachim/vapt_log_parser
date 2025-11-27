@@ -1,0 +1,9 @@
+ANY teammate can install full dependencies with one command:
+
+pymongo
+python-dotenv
+requests
+jsonschema
+pymongo
+python-dateutil
+packaging
