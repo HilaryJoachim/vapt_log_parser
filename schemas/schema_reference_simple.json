@@ -1,0 +1,13 @@
+{
+  "fields": {
+    "timestamp": "datetime",
+    "host": "string",
+    "os": "string",
+    "software": "string",
+    "version": "string",
+    "event_type": "string",
+    "message": "string",
+    "source": "string"
+  },
+  "required_fields": ["timestamp", "host", "software", "version", "os"]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unified Log Schema",
+  "type": "object",
+
+  "properties": {
+    "timestamp": { "type": "string" },
+    "host": { "type": "string" },
+    "os": { "type": "string" },
+
+    "software": { "type": ["string", "null"] },
+    "version": { "type": ["string", "null"] },
+
+    "event_type": { "type": ["string", "null"] },
+    "category": { "type": ["string", "null"] },
+    "severity": {
+      "type": ["string", "null"],
+      "enum": ["info", "warning", "error", null]
+    },
+
+    "message": { "type": "string" },
+    "source": { "type": "string" },
+
+    "pid": { "type": ["string", "null"] },
+    "event_id": { "type": ["string", "null"] },
+
+    "username": { "type": ["string", "null"] },
+    "source_ip": { "type": ["string", "null"] }
+  },
+
+  "required": ["timestamp", "host", "os", "message", "source"],
+  "additionalProperties": false
+}
